@@ -2,13 +2,13 @@ file_format: "1"
 id: sweep-pro
 name: Sweep-Pro
 type: shield
-url: https://github.com/foostan/crkbd/
-requires: [pro_micro]
+url: https://github.com/nxtkb/Sweep-Pro
+requires: [ pro_micro ]
 features:
-  - keys
-  - encoders
-  - cirque trackpad
-  - ink display
+- keys
+- encoders
+- cirque trackpad
+- ink display
 siblings:
-  - sweep_left
-  - sweep_right
+- sweep_left
+- sweep_right
