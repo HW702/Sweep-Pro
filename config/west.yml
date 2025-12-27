@@ -3,11 +3,18 @@ manifest:
   - name: zmkfirmware
     url-base: https://github.com/lynnlee0522 # 修改这里
 
+  - name: nxtkb
+    url-base: https://github.com/nxtkb
+
   projects:
   - name: zmk_offical
     remote: zmkfirmware
     revision: main
     import: app/west.yml
+  - name: zmk-behavior-report
+    remote: nxtkb
+    revision: main
+    import: west.yml
 
   self:
     path: config
