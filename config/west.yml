@@ -2,10 +2,8 @@ manifest:
   remotes:
   - name: zmkfirmware
     url-base: https://github.com/lynnlee0522 # 修改这里
-
   - name: nxtkb
     url-base: https://github.com/nxtkb
-
   projects:
   - name: zmk_offical
     remote: zmkfirmware
