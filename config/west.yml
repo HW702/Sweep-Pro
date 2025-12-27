@@ -6,7 +6,7 @@ manifest:
   projects:
   - name: zmk_offical
     remote: zmkfirmware
-    revision: st7789_screen # 修改这里，指定分支名
+    revision: main
     import: app/west.yml
 
   self:
