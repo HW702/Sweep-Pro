@@ -8,6 +8,9 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    chosen {
+        zmk,charmap = &charmap_us;
+    };
     behaviors {
     // Codepoint to keycode mapping for a US keyboard layout.
 #if ZMK_BEHAVIOR_OMIT(charmap_us)
