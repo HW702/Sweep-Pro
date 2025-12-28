@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #include "behaviors/report.dtsi"
+#include "behavior/character_map.dtsi"
 
 
 #define MAC 0
