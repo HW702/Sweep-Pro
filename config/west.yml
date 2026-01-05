@@ -14,5 +14,9 @@ manifest:
   - name: cirque-input-module
     remote: cirque-input-module
     revision: main
+  - name: zmk-behavior-report
+    remote: nxtkb
+    revision: main
+    import: west.yml
   self:
     path: config
