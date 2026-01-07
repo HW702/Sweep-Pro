@@ -101,10 +101,6 @@
 	chosen {
 		zmk,physical-layout = &physical_layout0;
 	};
-	
-	vbatt: vbatt {
-		compatible = "zmk,battery-nrf-vddh";
-	};
 };
 
 / {
@@ -148,4 +144,3 @@
 		device = <&glidepoint_split>;
 	};
 };
-
