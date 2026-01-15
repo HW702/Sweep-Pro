@@ -93,10 +93,10 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&kp B  &kp L            &kp M         &kp C              &kp Z      &kp J      &kp F               &kp O                 &kp U             &kp BSPC
-&kp N  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT D  &kp P      &kp Y      &hmr RIGHT_SHIFT H  &hmr RIGHT_CONTROL A  &hmr RIGHT_ALT E  &kp I
-&kp X  &kp Q            &kp V         &kp G              &kp W      &kp COMMA  &kp K               &kp DOT               &kp DOLLAR        &kp RET
-                        &kp C_MUTE    &kp S              &kp TAB    &kp ESC    &kp SPACE           &studio_unlock
+&kp B  &kp L            &kp M         &kp C              &kp Z        &kp J      &kp F               &kp O                 &kp U             &kp BSPC
+&kp N  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT D  &kp P        &kp Y      &hmr RIGHT_SHIFT H  &hmr RIGHT_CONTROL A  &hmr RIGHT_ALT E  &kp I
+&kp X  &kp Q            &kp V         &kp G              &kp W        &kp COMMA  &kp K               &kp DOT               &kp DOLLAR        &kp RET
+                        &kp C_MUTE    &kp S              &lt 2 TAB    &kp ESC    &lt 3 SPACE         &studio_unlock
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -117,10 +117,10 @@
         right_layer {
             display-name = "NUM";
             bindings = <
-&kp N1   &kp N2    &kp N3      &kp N4   &kp N5     &kp N6    &kp N7     &kp N8          &kp N9     &kp N0
-&kp DEL  &kp CAPS  &kp PSCRN   &kp INS  &trans     &kp LEFT  &kp DOWN   &kp UP          &kp RIGHT  &trans
-&trans   &trans    &trans      &trans   &trans     &kp HOME  &kp PG_DN  &kp PG_UP       &kp END    &trans
-                   &kp C_MUTE  &trans   &kp ESC    &trans    &trans     &studio_unlock
+&kp N1   &kp N2        &kp N3            &kp N4          &kp N5          &kp N6    &kp N7     &kp N8          &kp N9     &kp N0
+&kp DEL  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_GUI    &kp LEFT  &kp DOWN   &kp UP          &kp RIGHT  &trans
+&trans   &trans        &trans            &trans          &trans          &kp HOME  &kp PG_DN  &kp PG_UP       &kp END    &trans
+                       &kp C_MUTE        &trans          &trans          &trans    &trans     &studio_unlock
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
