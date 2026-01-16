@@ -21,9 +21,7 @@
 #define MOUSE 5
 
 &sensors {
-    left_encoder { triggers-per-rotation = <15>; };
-
-    right_encoder { triggers-per-rotation = <45>; };
+    triggers-per-rotation = <15>;
 };
 
 / {
@@ -47,7 +45,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <5 15 25 26 16 6 7 17 27 28 18 8 9 19 29 33 34 35>;
             retro-tap;
         };
@@ -59,7 +57,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             retro-tap;
@@ -96,43 +94,43 @@
 &kp B  &kp L            &kp M         &kp C              &kp Z        &kp J       &kp F               &kp O                 &kp U             &kp BSPC
 &kp N  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT D  &kp P        &kp Y       &hmr RIGHT_SHIFT H  &hmr RIGHT_CONTROL A  &hmr RIGHT_ALT E  &kp I
 &kp X  &kp Q            &kp V         &kp G              &kp W        &kp DOLLAR  &kp K               &kp COMMA             &kp DOT           &kp RET
-                        &kp C_MUTE    &kp S              &lt 2 TAB    &kp ESC     &lt 3 SPACE         &studio_unlock
+                        &kp C_MUTE    &lt 1 S            &lt 2 TAB    &kp ESC     &lt 3 SPACE         &studio_unlock
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+        };
+
+        numr_layer {
+            display-name = "NUMR";
+            bindings = <
+&kp N1     &kp N2     &kp N3    &kp N4    &kp N5     &kp N6     &kp N7    &kp N8     &kp N9     &kp N0
+&kp AMPS   &kp TILDE  &kp DLLR  &kp AT    &kp EXCL   &kp COLON  &kp FSLH  &kp MINUS  &kp EQUAL  &kp ASTRK
+&kp GRAVE  &kp CARET  &kp HASH  &kp PIPE  &kp QMARK  &kp SEMI   &kp BSLH  &kp UNDER  &kp PLUS   &kp PRCNT
+                      &trans    &trans    &trans     &trans     &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        windows_layer {
-            display-name = "WIN";
+        quick_layer {
+            display-name = "QUICK";
             bindings = <
-&kp Q  &kp W       &kp E       &kp R        &kp T         &kp Y      &kp U        &kp I           &kp O       &kp P
-&kp A  &ht LALT S  &ht LGUI D  &ht LCTRL F  &kp G         &kp H      &ht RCTRL J  &ht RGUI K      &ht RALT L  &kp BSPC
-&kp Z  &kp X       &kp C       &kp V        &kp B         &kp N      &kp M        &kp COMMA       &kp DOT     &kp ENTER
-                   &kp C_MUTE  &lt 3 TAB    &kp LSHIFT    &kp SPACE  &lt 2 TAB    &studio_unlock
+&trans  &trans  &trans  &trans  &kp F5  &trans  &trans  &trans  &trans  &kp PSCRN
+&kp LA(TAB)  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_GUI    &kp LEFT  &kp DOWN   &kp UP          &kp RIGHT  &tog 5
+&kp DEL      &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp LA(F4)      &kp HOME  &kp PG_DN  &kp PG_UP       &kp END    &default_report
+                           &trans            &trans          &trans          &trans    &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        right_layer {
-            display-name = "NUM";
+        numl_layer {
+            display-name = "NUML";
             bindings = <
-&kp N1       &kp N2        &kp N3            &kp N4          &kp N5          &kp N6    &kp N7     &kp N8          &kp N9     &kp N0
-&kp DEL      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_GUI    &kp LEFT  &kp DOWN   &kp UP          &kp RIGHT  &trans
-&kp LA(TAB)  &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp LA(F4)      &kp HOME  &kp PG_DN  &kp PG_UP       &kp END    &trans
-                           &kp C_MUTE        &trans          &trans          &trans    &trans     &studio_unlock
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
-        };
-
-        left_layer {
-            display-name = "SYMBOL";
-            bindings = <
-&kp EXCL           &kp AT    &kp HASH    &kp DLLR  &kp PRCNT          &kp CARET  &kp AMPS   &kp ASTRK       &kp GRAVE  &kp TILDE
-&kp APOSTROPHE     &kp LBKT  &kp LBRC    &kp LPAR  &default_report    &kp FSLH   &kp MINUS  &kp EQUAL       &kp COLON  &kp SEMI
-&kp DOUBLE_QUOTES  &kp RBKT  &kp RBRC    &kp RPAR  &trans             &kp BSLH   &kp UNDER  &kp PLUS        &kp PIPE   &kp QMARK
-                             &kp C_MUTE  &trans    &trans             &tog 5     &trans     &studio_unlock
+&kp N1    &kp N2    &kp N3    &kp N4    &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+&kp APOS  &kp LBKT  &kp LBRC  &kp LPAR  &kp LT  &trans  &trans  &trans  &trans  &trans
+&kp DQT   &kp RBKT  &kp RBRC  &kp RPAR  &kp GT  &trans  &trans  &trans  &trans  &trans
+                    &trans    &trans    &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -141,7 +139,7 @@
         tri_layer {
             display-name = "FUNC";
             bindings = <
-&kp F1  &kp F2   &kp F3      &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG   &tog 1          &kp C_MUTE    &kp C_PREV
+&kp F1  &kp F2   &kp F3      &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG   &trans          &kp C_MUTE    &kp C_PREV
 &kp F5  &kp F6   &kp F7      &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &studio_unlock  &kp C_VOL_UP  &kp C_PP
 &kp F9  &kp F10  &kp F11     &kp F12  &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &soft_off       &kp C_VOL_DN  &kp C_NEXT
                  &kp C_MUTE  &trans   &trans          &trans        &trans         &studio_unlock
