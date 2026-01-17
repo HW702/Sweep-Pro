@@ -26,6 +26,7 @@
     tapping-term-ms = <220>;
     quick-tap-ms = <150>;
     require-prior-idle-ms = <100>;
+    retro-tap;
 };
 
 / {
@@ -98,10 +99,10 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&kp B  &kp L            &kp M         &kp C              &kp Z        &kp J       &kp F               &kp O                 &kp U             &kp BSPC
-&kp N  &hml LEFT_ALT R  &hml LCTRL T  &hml LEFT_SHIFT D  &kp P        &kp Y       &hmr RIGHT_SHIFT H  &hmr RIGHT_CONTROL A  &hmr RIGHT_ALT E  &kp I
-&kp X  &kp Q            &kp V         &kp G              &kp W        &kp DOLLAR  &kp K               &kp COMMA             &kp DOT           &kp RET
-                        &kp C_MUTE    &lt 1 S            &lt 2 TAB    &kp ESC     &lt 3 SPACE         &studio_unlock
+&kp B  &kp L  &kp M       &kp C    &kp Z        &kp J               &kp F        &kp O           &kp U    &kp BSPC
+&kp N  &kp R  &kp T       &kp D    &kp P        &kp Y               &kp H        &kp A           &kp E    &kp I
+&kp X  &kp Q  &kp V       &kp G    &kp W        &kp DOLLAR          &kp K        &kp COMMA       &kp DOT  &kp RET
+              &kp C_MUTE  &lt 1 S  &lt 2 TAB    &mt LEFT_SHIFT ESC  &lt 3 SPACE  &studio_unlock
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
@@ -110,10 +111,10 @@
         numr_layer {
             display-name = "NUMR";
             bindings = <
-&kp N1     &kp N2     &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9     &kp N0
-&kp AMPS   &kp TILDE  &kp DLLR  &kp AT    &kp EXCL     &kp COLON  &kp FSLH  &kp MINUS  &kp EQUAL  &kp ASTRK
-&kp GRAVE  &kp CARET  &kp HASH  &kp PIPE  &kp QMARK    &kp SEMI   &kp BSLH  &kp UNDER  &kp PLUS   &kp PRCNT
-                      &trans    &trans    &trans       &trans     &trans    &trans
+&kp N4     &kp N3     &kp N2    &kp N1    &kp N0       &kp N5     &kp NUMBER_6  &kp N7     &kp N8     &kp N9
+&kp AMPS   &kp TILDE  &kp DLLR  &kp AT    &kp EXCL     &kp COLON  &kp FSLH      &kp MINUS  &kp EQUAL  &kp ASTRK
+&kp GRAVE  &kp CARET  &kp HASH  &kp PIPE  &kp QMARK    &kp SEMI   &kp BSLH      &kp UNDER  &kp PLUS   &kp PRCNT
+                      &trans    &trans    &trans       &trans     &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -122,9 +123,9 @@
         quick_layer {
             display-name = "QUICK";
             bindings = <
-&trans       &trans        &trans            &trans          &kp LC(Z)       &trans    &trans     &trans     &trans     &trans
+&trans       &trans        &trans            &kp LA(F4)      &kp LC(Z)       &trans    &trans     &trans     &trans     &trans
 &kp LA(TAB)  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_GUI    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &tog 5
-&kp DEL      &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp LA(F4)      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &default_report
+&kp DEL      &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp LC(S)       &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &default_report
                            &trans            &trans          &trans          &trans    &trans     &trans
             >;
 
