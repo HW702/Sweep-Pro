@@ -122,7 +122,7 @@
         quick_layer {
             display-name = "QUICK";
             bindings = <
-&trans       &trans        &trans            &trans          &kp F5          &trans    &trans     &trans     &trans     &kp PSCRN
+&trans       &trans        &trans            &trans          &kp LC(Z)       &trans    &trans     &trans     &trans     &trans
 &kp LA(TAB)  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_GUI    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &tog 5
 &kp DEL      &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp LA(F4)      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &default_report
                            &trans            &trans          &trans          &trans    &trans     &trans
