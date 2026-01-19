@@ -72,6 +72,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        dot_dance: dot_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOT_DANCE";
+            #binding-cells = <0>;
+            bindings = <&dot_comma>, <&kp COMMA>;
+
+            tapping-term-ms = <150>;
+        };
+
         mmv {
             acceleration-exponent = <1>;// 1
             time-to-max-speed-ms = <300>;// 40
@@ -102,7 +111,7 @@
             bindings = <
 &kp B  &kp L  &kp M       &kp C    &kp Z        &kp J               &kp F        &kp O           &kp U      &kp BSPC
 &kp N  &kp R  &kp T       &kp D    &kp P        &kp Y               &kp H        &kp A           &kp E      &kp I
-&kp X  &kp Q  &kp V       &kp G    &kp W        &kp APOS            &kp K        &dot_comma      &kp COLON  &kp RET
+&kp X  &kp Q  &kp V       &kp G    &kp W        &kp APOS            &kp K        &dot_dance      &kp COLON  &kp RET
               &kp C_MUTE  &lt 1 S  &lt 3 TAB    &mt LEFT_SHIFT ESC  &lt 2 SPACE  &studio_unlock
             >;
 
