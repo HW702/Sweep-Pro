@@ -19,7 +19,6 @@
     tapping-term-ms = <220>;
     quick-tap-ms = <150>;
     require-prior-idle-ms = <100>;
-    retro-tap;
 };
 
 / {
@@ -64,6 +63,15 @@
             require-prior-idle-ms = <100>;
         };
 
+        dot_comma: dot_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COMMA";
+            bindings = <&kp DOT>, <&kp COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         mmv {
             acceleration-exponent = <1>;// 1
             time-to-max-speed-ms = <300>;// 40
@@ -92,9 +100,9 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&kp B  &kp L  &kp M       &kp C    &kp Z        &kp J               &kp F        &kp O           &kp U    &kp BSPC
-&kp N  &kp R  &kp T       &kp D    &kp P        &kp Y               &kp H        &kp A           &kp E    &kp I
-&kp X  &kp Q  &kp V       &kp G    &kp W        &key_repeat         &kp K        &kp COMMA       &kp DOT  &kp RET
+&kp B  &kp L  &kp M       &kp C    &kp Z        &kp J               &kp F        &kp O           &kp U      &kp BSPC
+&kp N  &kp R  &kp T       &kp D    &kp P        &kp Y               &kp H        &kp A           &kp E      &kp I
+&kp X  &kp Q  &kp V       &kp G    &kp W        &kp APOS            &kp K        &dot_comma      &kp COLON  &kp RET
               &kp C_MUTE  &lt 1 S  &lt 3 TAB    &mt LEFT_SHIFT ESC  &lt 2 SPACE  &studio_unlock
             >;
 
@@ -105,8 +113,8 @@
             display-name = "LEFT";
             bindings = <
 &kp N4     &kp N3     &kp N2    &kp N1    &kp N0       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&kp AMPS   &kp TILDE  &kp DLLR  &kp AT    &kp EXCL     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-&kp GRAVE  &kp CARET  &kp HASH  &kp PIPE  &kp QMARK    &trans          &trans          &trans        &trans           &trans
+&kp AMPS   &kp TILDE  &kp DLLR  &kp AT    &kp QMARK    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+&kp GRAVE  &kp CARET  &kp HASH  &kp PIPE  &kp EXCL     &trans          &trans          &trans        &trans           &trans
                       &trans    &trans    &trans       &trans          &trans          &trans
             >;
 
@@ -128,7 +136,7 @@
         quick_layer {
             display-name = "QUICK";
             bindings = <
-&trans       &trans        &trans            &kp LA(F4)      &kp LC(Z)       &trans    &kp LC(F)  &kp LC(O)  &trans     &trans
+&kp LA(F4)   &trans        &trans            &kp LC(LS(Z))   &kp LC(Z)       &trans    &kp LC(F)  &kp LC(O)  &trans     &trans
 &kp LA(TAB)  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_GUI    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &tog 5
 &kp DEL      &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp LC(S)       &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &default_report
                            &trans            &trans          &trans          &trans    &trans     &trans
