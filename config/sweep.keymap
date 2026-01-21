@@ -16,7 +16,7 @@
 &sensors { triggers-per-rotation = <15>; };
 
 &lt {
-    tapping-term-ms = <220>;
+    tapping-term-ms = <180>;
     quick-tap-ms = <150>;
     require-prior-idle-ms = <100>;
 };
@@ -111,7 +111,7 @@
             bindings = <
 &kp B  &kp L  &kp M       &kp C    &kp Z        &kp J               &kp F        &kp O           &kp U      &kp BSPC
 &kp N  &kp R  &kp T       &kp D    &kp P        &kp Y               &kp H        &kp A           &kp E      &kp I
-&kp X  &kp Q  &kp V       &kp G    &kp W        &kp APOS            &kp K        &dot_dance      &kp COLON  &kp RET
+&kp X  &kp Q  &kp V       &kp G    &kp W        &kp APOS            &kp K        &ht COMMA DOT   &kp COLON  &kp RET
               &kp C_MUTE  &lt 1 S  &lt 3 TAB    &mt LEFT_SHIFT ESC  &lt 2 SPACE  &studio_unlock
             >;
 
