@@ -109,10 +109,10 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&kp B  &kp L  &kp M       &kp C    &kp Z        &kp J               &kp F        &kp O           &kp U      &kp BSPC
-&kp N  &kp R  &kp T       &kp D    &kp P        &kp Y               &kp H        &kp A           &kp E      &kp I
-&kp X  &kp Q  &kp V       &kp G    &kp W        &kp APOS            &kp K        &ht COMMA DOT   &kp COLON  &kp RET
-              &kp C_MUTE  &lt 1 S  &lt 3 TAB    &mt LEFT_SHIFT ESC  &lt 2 SPACE  &studio_unlock
+&kp B  &kp L  &kp M       &kp C    &kp Z        &kp J      &kp F                 &kp O           &kp U      &kp BSPC
+&kp N  &kp R  &kp T       &kp D    &kp P        &kp Y      &kp H                 &kp A           &kp E      &kp I
+&kp X  &kp Q  &kp V       &kp G    &kp W        &kp APOS   &kp K                 &ht COMMA DOT   &kp COLON  &kp RET
+              &kp C_MUTE  &lt 1 S  &lt 3 TAB    &lt 2 ESC  &mt LEFT_SHIFT SPACE  &studio_unlock
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
