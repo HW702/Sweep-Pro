@@ -145,10 +145,10 @@
         quick_layer {
             display-name = "QUICK";
             bindings = <
-&kp LA(F4)   &kp C_AL_FILE_BROWSER  &kp C_AL_CONTROL_PANEL  &kp LC(LS(Z))   &kp LC(Z)       &kp C_AL_WWW  &kp LC(F)  &kp LC(O)  &trans     &trans
-&kp LA(TAB)  &kp LEFT_ALT           &kp LEFT_CONTROL        &kp LEFT_SHIFT  &kp LEFT_GUI    &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT  &kp LG(I)
-&kp DEL      &kp LC(X)              &kp LC(C)               &kp LC(V)       &kp LC(S)       &kp HOME      &kp PG_DN  &kp PG_UP  &kp END    &default_report
-                                    &trans                  &trans          &trans          &trans        &trans     &trans
+&kp LA(F4)   &kp C_AL_FILE_BROWSER  &kp LC(LA(T))     &kp LC(LS(Z))   &kp LC(Z)       &kp C_AL_WWW  &kp LC(F)  &kp LC(O)  &trans     &trans
+&kp LA(TAB)  &kp LEFT_ALT           &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_GUI    &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT  &kp LG(I)
+&kp DEL      &kp LC(X)              &kp LC(C)         &kp LC(V)       &kp LC(S)       &kp HOME      &kp PG_DN  &kp PG_UP  &kp END    &default_report
+                                    &trans            &trans          &trans          &trans        &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
