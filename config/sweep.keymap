@@ -81,6 +81,17 @@
             tapping-term-ms = <150>;
         };
 
+        pt_brace: pt_brace {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PT_BRACE";
+            bindings = <&brace_pair>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            require-prior-idle-ms = <100>;
+        };
+
         mmv {
             acceleration-exponent = <1>;// 1
             time-to-max-speed-ms = <300>;// 40
@@ -100,6 +111,15 @@
         tri_layer {
             if-layers = <2 3>;
             then-layer = <4>;
+        };
+    };
+
+    macros {
+        brace_pair: brace_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
+            label = "BRACE_PAIR";
         };
     };
 
@@ -133,10 +153,10 @@
         right_layer {
             display-name = "RIGHT";
             bindings = <
-&trans    &trans    &trans    &trans    &trans    &kp N5     &kp N6    &kp N7     &kp N8     &kp N9
-&kp APOS  &kp LBRC  &kp LBKT  &kp LPAR  &kp LT    &kp COLON  &kp FSLH  &kp MINUS  &kp EQUAL  &kp ASTRK
-&kp DQT   &kp RBRC  &kp RBKT  &kp RPAR  &kp GT    &kp SEMI   &kp BSLH  &kp UNDER  &kp PLUS   &kp PRCNT
-                    &trans    &trans    &trans    &trans     &trans    &trans
+&trans    &trans            &trans    &trans    &trans    &kp N5     &kp N6    &kp N7     &kp N8     &kp N9
+&kp APOS  &pt_brace 0 LBRC  &kp LBKT  &kp LPAR  &kp LT    &kp COLON  &kp FSLH  &kp MINUS  &kp EQUAL  &kp ASTRK
+&kp DQT   &kp RBRC          &kp RBKT  &kp RPAR  &kp GT    &kp SEMI   &kp BSLH  &kp UNDER  &kp PLUS   &kp PRCNT
+                            &trans    &trans    &trans    &trans     &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
