@@ -144,11 +144,11 @@
             label = "BRACE_PAIR";
         };
 
-        paren_pair: braket_pair {
+        paren_pair: paren_pair {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LPAR &kp RPAR &kp LEFT>;
-            label = "BRAKET_PAIR";
+            label = "PAREN_PAIR";
         };
 
         braket_pair: braket_pair {
