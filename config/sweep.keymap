@@ -92,6 +92,28 @@
             require-prior-idle-ms = <100>;
         };
 
+        pt_bracket: pt_bracket {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PT_BRACKET";
+            bindings = <&brace_pair>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            require-prior-idle-ms = <100>;
+        };
+
+        pt_paren: pt_paren {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PT_PAREN";
+            bindings = <&paren_pair>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            require-prior-idle-ms = <100>;
+        };
+
         mmv {
             acceleration-exponent = <1>;// 1
             time-to-max-speed-ms = <300>;// 40
@@ -120,6 +142,20 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
             label = "BRACE_PAIR";
+        };
+
+        paren_pair: braket_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "BRAKET_PAIR";
+        };
+
+        braket_pair: braket_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
+            label = "BRAKET_PAIR";
         };
     };
 
@@ -153,10 +189,10 @@
         right_layer {
             display-name = "RIGHT";
             bindings = <
-&trans    &trans            &trans    &trans    &trans    &kp N5     &kp N6    &kp N7     &kp N8     &kp N9
-&kp APOS  &pt_brace 0 LBRC  &kp LBKT  &kp LPAR  &kp LT    &kp COLON  &kp FSLH  &kp MINUS  &kp EQUAL  &kp ASTRK
-&kp DQT   &kp RBRC          &kp RBKT  &kp RPAR  &kp GT    &kp SEMI   &kp BSLH  &kp UNDER  &kp PLUS   &kp PRCNT
-                            &trans    &trans    &trans    &trans     &trans    &trans
+&trans    &trans            &trans              &trans            &trans    &kp N5     &kp N6    &kp N7     &kp N8     &kp N9
+&kp APOS  &pt_brace 0 LBRC  &pt_bracket 0 LBKT  &pt_paren 0 LPAR  &kp LT    &kp COLON  &kp FSLH  &kp MINUS  &kp EQUAL  &kp ASTRK
+&kp DQT   &kp RBRC          &kp RBKT            &kp RPAR          &kp GT    &kp SEMI   &kp BSLH  &kp UNDER  &kp PLUS   &kp PRCNT
+                            &trans              &trans            &trans    &trans     &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
