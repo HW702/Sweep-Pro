@@ -168,7 +168,7 @@
 &ht AMPS B  &ht TILDE L  &ht HASH M  &ht PIPE C  &ht GRAVE Z    &kp J      &kp F                 &ht DLLR O      &kp U      &kp BSPC
 &ht LT N    &ht LBRC R   &ht LBKT T  &ht LPAR D  &kp P          &kp Y      &kp H                 &kp A           &kp E      &kp I
 &ht GT X    &ht RBRC Q   &ht RBKT V  &ht RPAR G  &kp W          &kp APOS   &kp K                 &ht COMMA DOT   &kp COLON  &kp RET
-                         &kp C_MUTE  &lt 1 S     &lt 3 TAB      &lt 2 ESC  &mt LEFT_SHIFT SPACE  &studio_unlock
+                         &kp C_MUTE  &lt 1 S     &lt 3 TAB      &lt 2 ESC  &mt LEFT_SHIFT SPACE  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
@@ -214,9 +214,9 @@
             display-name = "FUNC";
             bindings = <
 &kp F1  &kp F2   &kp F3      &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG   &trans          &tog 5        &kp C_PREV
-&kp F5  &kp F6   &kp F7      &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &studio_unlock  &kp C_VOL_UP  &kp C_PP
+&kp F5  &kp F6   &kp F7      &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &trans  &kp C_VOL_UP  &kp C_PP
 &kp F9  &kp F10  &kp F11     &kp F12  &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &soft_off       &kp C_VOL_DN  &kp C_NEXT
-                 &kp C_MUTE  &trans   &trans          &trans        &trans         &studio_unlock
+                 &kp C_MUTE  &trans   &trans          &trans        &trans         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -228,7 +228,7 @@
 &tog 5  &mkp MB4  &mkp MCLK   &mkp MB5   &trans        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &tog 5
 &trans  &trans    &trans      &trans     &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
 &trans  &trans    &trans      &trans     &trans        &trans          &mkp MB4        &mkp MCLK       &mkp MB5         &trans
-                  &kp C_MUTE  &kp SPACE  &kp LSHIFT    &mkp LCLK       &mkp RCLK       &studio_unlock
+                  &kp C_MUTE  &kp SPACE  &kp LSHIFT    &mkp LCLK       &mkp RCLK       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
