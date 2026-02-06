@@ -28,10 +28,12 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <120>;
         };
 
         hml: home_row_mod_left {
@@ -164,9 +166,9 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&ht AMPS B  &ht TILDE L  &ht HASH M  &ht PIPE C  &ht AT Z       &ht PLUS J      &ht CARET F           &ht UNDER O    &ht EQUAL U     &ht DEL BSPC
+&ht AMPS B  &ht TILDE L  &ht HASH M  &ht PIPE C  &ht AT Z       &ht PLUS J      &ht CARET F           &ht UNDER O    &ht EQUAL U     &kp BSPC
 &ht LT N    &ht LBRC R   &ht LBKT T  &ht LPAR D  &ht QMARK P    &ht PRCNT Y     &ht FSLH H            &ht MINUS A    &ht DLLR E      &ht ASTRK I
-&ht GT X    &ht RBRC Q   &ht RBKT V  &ht RPAR G  &ht EXCL W     &ht GRAVE APOS  &ht BSLH K            &ht COMMA DOT  &ht SEMI COLON  &kp RET
+&ht GT X    &ht RBRC Q   &ht RBKT V  &ht RPAR G  &ht EXCL W     &ht GRAVE APOS  &ht BSLH K            &ht COMMA DOT  &ht SEMI COLON  &mt RCTRL RET
                          &kp C_MUTE  &lt 1 S     &lt 3 TAB      &lt 2 ESC       &mt LEFT_SHIFT SPACE  &trans
             >;
 
