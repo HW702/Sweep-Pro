@@ -119,7 +119,7 @@
             magic_ue {
                 trigger-keys = <U>;
                 max-prior-idle-ms = <300>;
-                bindings = <&kp O>;
+                bindings = <&kp E>;
             };
 
             magic_eu {
@@ -144,6 +144,12 @@
                 trigger-keys = <K>;
                 max-prior-idle-ms = <300>;
                 bindings = <&kp Y>;
+            };
+
+            magic_dg {
+                trigger-keys = <D>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp G>;
             };
         };
 
