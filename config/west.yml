@@ -4,7 +4,9 @@ manifest:
     url-base: https://github.com/zmkfirmware
   - name: nxtkb
     url-base: https://github.com/nxtkb
-  projects:
+  - name: urob
+    url-base: https://github.com/urob
+projects:
   - name: zmk
     remote: zmkfirmware
     revision: v0.3
@@ -13,6 +15,8 @@ manifest:
     remote: nxtkb
     revision: main
     import: west.yml
-
+  - name: zmk-adaptive-key
+    remote: urob
+    revision: v0.3 # Should match ZMK release.
   self:
     path: config

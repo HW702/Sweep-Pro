@@ -36,34 +36,6 @@
             require-prior-idle-ms = <120>;
         };
 
-        hml: home_row_mod_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <5 15 25 26 16 6 7 17 27 28 18 8 9 19 29 33 34 35>;
-            retro-tap;
-            require-prior-idle-ms = <100>;
-            quick-tap-ms = <150>;
-        };
-
-        hmr: home_row_mod_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
-            retro-tap;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
-        };
-
         dot_comma: dot_comma {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_COMMA";
@@ -158,6 +130,21 @@
             bindings = <&kp LBKT &kp RBKT &kp LEFT>;
             label = "BRAKET_PAIR";
         };
+
+        magic: magic {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&key_repeat>;
+
+            magic_oa { trigger-keys = <O>; max-prior-idle-ms = <300>; bindings = <&kp A>; };
+            magic_ao { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp O>; };
+            magic_ue { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp O>; };
+            magic_eu { trigger-keys = <E>; max-prior-idle-ms = <300>; bindings = <&kp U>; };
+            magic_hy { trigger-keys = <H>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
+            magic_fy { trigger-keys = <F>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
+            magic_ky { trigger-keys = <K>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
+            magic_hy { trigger-keys = <H>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
+        };
     };
 
     keymap {
@@ -166,10 +153,10 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&ht AMPS B  &ht TILDE L  &ht HASH M  &ht PIPE C  &ht AT Z       &ht PLUS J      &ht CARET F           &ht UNDER O    &ht EQUAL U     &kp BSPC
+&ht TAB B   &ht TILDE L  &ht HASH M  &ht PIPE C  &ht AT Z       &ht PLUS J      &ht CARET F           &ht UNDER O    &ht EQUAL U     &kp BSPC
 &ht LT N    &ht LBRC R   &ht LBKT T  &ht LPAR D  &ht QMARK P    &ht PRCNT Y     &ht FSLH H            &ht MINUS A    &ht DLLR E      &ht ASTRK I
 &ht GT X    &ht RBRC Q   &ht RBKT V  &ht RPAR G  &ht EXCL W     &ht GRAVE APOS  &ht BSLH K            &ht COMMA DOT  &ht SEMI COLON  &mt RCTRL RET
-                         &kp C_MUTE  &lt 1 S     &lt 3 TAB      &lt 2 ESC       &mt LEFT_SHIFT SPACE  &trans
+                         &kp C_MUTE  &lt 1 S     &magic         &lt 2 ESC       &mt LEFT_SHIFT SPACE  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
