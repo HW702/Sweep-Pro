@@ -104,13 +104,60 @@
             #binding-cells = <0>;
             bindings = <&key_repeat>;
 
-            magic_oa { trigger-keys = <O>; max-prior-idle-ms = <300>; bindings = <&kp A>; };
-            magic_ao { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp O>; };
-            magic_ue { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp O>; };
-            magic_eu { trigger-keys = <E>; max-prior-idle-ms = <300>; bindings = <&kp U>; };
-            magic_hy { trigger-keys = <H>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
-            magic_fy { trigger-keys = <F>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
-            magic_ky { trigger-keys = <K>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
+            magic_oa {
+                trigger-keys = <O>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp A>;
+            };
+
+            magic_ao {
+                trigger-keys = <A>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp O>;
+            };
+
+            magic_ue {
+                trigger-keys = <U>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp O>;
+            };
+
+            magic_eu {
+                trigger-keys = <E>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp U>;
+            };
+
+            magic_hy {
+                trigger-keys = <H>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp Y>;
+            };
+
+            magic_fy {
+                trigger-keys = <F>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp Y>;
+            };
+
+            magic_ky {
+                trigger-keys = <K>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp Y>;
+            };
+        };
+
+        hold_magic: hold_magic {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_MAGIC";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&mo>, <&magic>;
+
+            require-prior-idle-ms = <120>;
         };
     };
 
@@ -152,10 +199,10 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&ht TAB B   &ht TILDE L  &ht HASH M  &ht PIPE C  &ht AT Z       &ht PLUS J      &ht CARET F           &ht UNDER O    &ht EQUAL U     &kp BSPC
-&ht LT N    &ht LBRC R   &ht LBKT T  &ht LPAR D  &ht QMARK P    &ht PRCNT Y     &ht FSLH H            &ht MINUS A    &ht DLLR E      &ht ASTRK I
-&ht GT X    &ht RBRC Q   &ht RBKT V  &ht RPAR G  &ht EXCL W     &ht GRAVE APOS  &ht BSLH K            &ht COMMA DOT  &ht SEMI COLON  &mt RCTRL RET
-                         &kp C_MUTE  &lt 1 S     &magic         &lt 2 ESC       &mt LEFT_SHIFT SPACE  &trans
+&ht TAB B       &ht AMPS L  &ht LT M    &ht GT C    &ht AT Z           &ht PLUS J      &ht PRCNT F           &ht UNDER O    &ht EQUAL U     &kp BSPC
+&ht ESC N       &ht LBRC R  &ht LBKT T  &ht LPAR D  &ht QMARK P        &ht CARET Y     &ht FSLH H            &ht MINUS A    &ht DLLR E      &ht ENTER I
+&mt LEFT_GUI X  &ht RBRC Q  &ht RBKT V  &ht RPAR G  &ht EXCL W         &ht GRAVE APOS  &ht BSLH K            &ht COMMA DOT  &ht SEMI COLON  &mt RCTRL TAB
+                            &kp C_MUTE  &lt 1 S     &hold_magic 3 0    &lt 2 ESC       &mt LEFT_SHIFT SPACE  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
