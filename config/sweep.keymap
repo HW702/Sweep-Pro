@@ -145,7 +145,7 @@
             };
         };
 
-        hold_magic: hold_magic {
+        hm: hold_magic {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_MAGIC";
             #binding-cells = <2>;
@@ -208,8 +208,8 @@
             bindings = <
 &ht TILDE B  &ht AMPS L  &ht LT M    &ht GT C    &ht AT Z           &ht PLUS J      &ht PRCNT F           &ht UNDER O    &ht EQUAL U     &kp BSPC
 &ht POUND N  &ht LBRC R  &ht LBKT T  &ht LPAR D  &ht QMARK P        &ht CARET Y     &ht FSLH H            &ht MINUS A    &ht DLLR E      &ht ASTRK I
-&lt 2 TAB    &ht RBRC Q  &ht RBKT V  &ht RPAR G  &ht EXCL W         &ht GRAVE APOS  &ht BSLH K            &ht COMMA DOT  &ht SEMI COLON  &mt RCTRL ENTER
-                         &kp C_MUTE  &lt 1 S     &hold_magic 3 0    &ht ESC X       &mt LEFT_SHIFT SPACE  &trans
+&magic       &ht RBRC Q  &ht RBKT V  &ht RPAR G  &ht EXCL W         &ht GRAVE APOS  &ht BSLH K            &ht COMMA DOT  &ht SEMI COLON  &mt RCTRL ENTER
+                         &kp C_MUTE  &lt 1 S     &lt 3 TAB          &ht ESC X       &mt LEFT_SHIFT SPACE  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
@@ -218,10 +218,10 @@
         left_layer {
             display-name = "LEFT";
             bindings = <
-&none       &kp N3  &kp N2  &kp N1  &kp N0          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&kp KP_DOT  &kp N4  &kp N5  &kp N6  &kp KP_PLUS     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-&none       &kp N9  &kp N8  &kp N7  &kp KP_MINUS    &trans          &trans          &trans        &trans           &trans
-                    &trans  &trans  &trans          &trans          &trans          &trans
+&none       &kp N3  &kp N2  &kp N1  &kp N0          &kp LS(J)  &kp LS(F)  &kp LS(O)  &kp LS(U)  &kp BSPC
+&kp KP_DOT  &kp N4  &kp N5  &kp N6  &kp KP_PLUS     &kp LS(Y)  &kp LS(H)  &kp LS(A)  &kp LS(E)  &kp LS(I)
+&none       &kp N9  &kp N8  &kp N7  &kp KP_MINUS    &trans     &kp LS(K)  &trans     &trans     &kp LS(ENTER)
+                    &trans  &trans  &trans          &kp LS(X)  &kp LS(SPACE)  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
