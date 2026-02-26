@@ -106,49 +106,41 @@
 
             magic_oa {
                 trigger-keys = <O>;
-                max-prior-idle-ms = <300>;
                 bindings = <&kp A>;
             };
 
             magic_ao {
                 trigger-keys = <A>;
-                max-prior-idle-ms = <300>;
                 bindings = <&kp O>;
             };
 
             magic_ue {
                 trigger-keys = <U>;
-                max-prior-idle-ms = <300>;
                 bindings = <&kp E>;
             };
 
             magic_eu {
                 trigger-keys = <E>;
-                max-prior-idle-ms = <300>;
                 bindings = <&kp U>;
             };
 
             magic_hy {
                 trigger-keys = <H>;
-                max-prior-idle-ms = <300>;
                 bindings = <&kp Y>;
             };
 
             magic_fy {
                 trigger-keys = <F>;
-                max-prior-idle-ms = <300>;
                 bindings = <&kp Y>;
             };
 
             magic_ky {
                 trigger-keys = <K>;
-                max-prior-idle-ms = <300>;
                 bindings = <&kp Y>;
             };
 
             magic_dg {
                 trigger-keys = <D>;
-                max-prior-idle-ms = <300>;
                 bindings = <&kp G>;
             };
         };
