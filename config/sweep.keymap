@@ -143,6 +143,16 @@
                 trigger-keys = <D>;
                 bindings = <&kp G>;
             };
+
+            magic_rl {
+                trigger-keys = <R>;
+                bindings = <&kp L>;
+            };
+
+            magic_qu {
+                trigger-keys = <Q>;
+                bindings = <&kp U>;
+            };
         };
 
         hm: hold_magic {
