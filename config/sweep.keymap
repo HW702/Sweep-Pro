@@ -144,6 +144,11 @@
                 bindings = <&kp G>;
             };
 
+            magic_lr {
+                trigger-keys = <L>;
+                bindings = <&kp R>;
+            };
+
             magic_rl {
                 trigger-keys = <R>;
                 bindings = <&kp L>;
