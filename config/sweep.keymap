@@ -168,7 +168,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings = <&mo>, <&magic>;
+            bindings = <&kp>, <&magic>;
 
             require-prior-idle-ms = <120>;
         };
@@ -221,10 +221,10 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&ht TILDE B  &ht AMPS L  &ht LT M    &ht GT C    &ht AT Z       &ht PLUS J      &ht PRCNT F           &ht UNDER O    &ht EQUAL U     &kp BSPC
-&ht POUND N  &ht LBRC R  &ht LBKT T  &ht LPAR D  &ht QMARK P    &ht CARET Y     &ht FSLH H            &ht MINUS A    &ht DLLR E      &ht ASTRK I
-&magic       &ht RBRC Q  &ht RBKT V  &ht RPAR G  &ht EXCL W     &ht GRAVE APOS  &ht BSLH K            &ht COMMA DOT  &ht SEMI COLON  &mt RCTRL ENTER
-                         &kp C_MUTE  &lt 1 S     &lt 3 TAB      &ht ESC X       &mt LEFT_SHIFT SPACE  &sl 2
+&ht TILDE B     &ht AMPS L  &ht LT M    &ht GT C    &ht AT Z       &ht PLUS J      &ht PRCNT F           &ht UNDER O    &ht EQUAL U     &kp BSPC
+&ht POUND N     &ht LBRC R  &ht LBKT T  &ht LPAR D  &ht QMARK P    &ht CARET Y     &ht FSLH H            &ht MINUS A    &ht DLLR E      &ht ASTRK I
+&hm LEFT_GUI 0  &ht RBRC Q  &ht RBKT V  &ht RPAR G  &ht EXCL W     &ht GRAVE APOS  &ht BSLH K            &ht COMMA DOT  &ht SEMI COLON  &mt RCTRL ENTER
+                            &kp C_MUTE  &lt 1 S     &lt 3 TAB      &ht ESC X       &mt LEFT_SHIFT SPACE  &sl 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
