@@ -246,8 +246,8 @@
             display-name = "RIGHT";
             bindings = <
 &trans             &kp LS(RA(B))  &trans        &kp LS(RA(N5))  &kp LS(RA(DOT))    &kp LS(RA(N9))  &kp LS(RA(N0))  &kp LS(RA(APOS))  &trans        &trans
-&kp RA(LS(GRAVE))  &brace_pair    &braket_pair  &paren_pair     &kp RA(LS(N3))     &trans          &kp RA(LS(N2))  &kp RA(GRAVE)     &kp RA(APOS)  &kp RA(N6)
-&kp LS(RA(MINUS))  &kp RA(DOT)    &trans        &trans          &trans             &trans          &trans          &trans            &trans        &trans
+&kp RA(LS(GRAVE))  &brace_pair    &braket_pair  &paren_pair     &kp RA(LS(N3))     &bt BT_PRV      &kp RA(LS(N2))  &kp RA(GRAVE)     &kp RA(APOS)  &kp RA(N6)
+&kp LS(RA(MINUS))  &kp RA(DOT)    &trans        &trans          &bt BT_CLR_ALL     &bt BT_NXT      &out OUT_USB    &out OUT_BLE      &trans        &bootloader
                                   &trans        &trans          &trans             &trans          &trans          &trans
             >;
 
